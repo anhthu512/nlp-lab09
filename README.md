@@ -1,10 +1,7 @@
 # LAB 09 — Named Entity Recognition and Information Extraction
 
-Thực hành NER trên CoNLL-2003 với baseline tuyến tính và BERT-Tiny được fine-tune cho token classification. Hai notebook đã lưu output của các ô code.
 
 ## Môi trường
-
-Đã chạy bằng Python 3.13, PyTorch 2.6.0+cu124, Transformers 5.22.2, scikit-learn 1.7.2, pandas 2.3.3 và PyArrow 26.0.0. Code tự chọn CUDA khi có GPU. Lần tải dữ liệu và pretrained checkpoint đầu tiên cần kết nối Internet.
 
 Các thư viện cần có trong kernel Jupyter gồm `torch`, `transformers`, `huggingface_hub`, `numpy`, `pandas`, `pyarrow`, `scikit-learn`, `matplotlib`, `ipython` và `ipykernel`.
 
@@ -59,18 +56,8 @@ py -3.13 information_extraction.py --text "Barack Obama spoke at Harvard Univers
 
 Các giá trị chi tiết nằm trong `results.csv` và `entity_metrics.csv`. Các notebook chứa output của lần chạy tương ứng. Khi chạy lại notebook fine-tuning, CSV, biểu đồ và checkpoint được cập nhật theo lần chạy mới.
 
-## Phần viết tay
-
-Bạn bổ sung nội dung tính tay, dự đoán trước thí nghiệm, diễn giải/phân tích lỗi và reflection vào bài nộp theo yêu cầu của giảng viên. Các tệp `calculations.md`, `prediction.md`, `error_analysis.md` và `reflection.md` thuộc phần bạn tự chuẩn bị.
-
 ## AI-assisted code
 
 - What was generated — Hai script Python, hai notebook, mã tính metric, xuất bảng/biểu đồ, chọn ví dụ lỗi, pipeline IE và hướng dẫn chạy này được hỗ trợ bởi AI.
-- What was modified — Phần kỹ thuật được tổ chức theo tên tệp của mục 29. Ô Experiment 6 được bổ sung theo yêu cầu tiếp theo.
 - What was verified — Hai script đã chạy độc lập. Hai notebook đã chạy từ đầu đến cuối và lưu output. CSV đã được đối chiếu với bảng trong notebook. Hai PNG đã được đối chiếu với hình lưu trong notebook. Bảng lỗi đã được kiểm tra đủ 5 ví dụ cho mỗi nhóm.
 
-## Nguồn
-
-- [CoNLL-2003 trên Hugging Face](https://huggingface.co/datasets/eriktks/conll2003)
-- [Pretrained BERT-Tiny](https://huggingface.co/google/bert_uncased_L-2_H-128_A-2)
-- [Hướng dẫn token classification của Transformers](https://huggingface.co/docs/transformers/tasks/token_classification)
